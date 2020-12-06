@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/нон.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <title>Double TT</title>
+</head>
+
+<body>
+  <main id="mainPage">
+    <div class="fullscreen">
+      <div class="split left">
+        <div class="content__wrapper left">
+          <h1 class="main__title">Deputat</h1>
+          <a type="button" data-toggle="modal" data-target="#deputatModal" class="custom__btn">Show Now</a>
+
+          <div class="modal fade custom__modal" id="deputatModal" tabindex="-1" role="dialog"
+            aria-labelledby="deputatModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deputatModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="list-group">
+                    <a href="./pages/deputat.html" class="list-group-item list-group-item-action">Deputat 1</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="split right">
+        <div class="content__wrapper right">
+          <h1 class="main__title">Open Budget</h1>
+          <a href="#" class="custom__btn">Show Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="js/main.js"></script>
+  <script>
+    const left = document.querySelector('.left');
+    const right = document.querySelector('.right');
+    const fullscreen = document.querySelector('.fullscreen');
+
+    left.addEventListener('mouseenter', () =>
+      fullscreen.classList.add('hover-left')
+    );
+    left.addEventListener('mouseleave', () =>
+      fullscreen.classList.remove('hover-left')
+    );
+
+    right.addEventListener('mouseenter', () =>
+      fullscreen.classList.add('hover-right')
+    );
+    right.addEventListener('mouseleave', () =>
+      fullscreen.classList.remove('hover-right')
+    );
+  </script>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

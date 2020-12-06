@@ -1,0 +1,102 @@
+@import './helpers';
+@import './mainPage';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --main: #2F77B5;
+  --left-bg-color: rgba(72, 70, 110, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 80%;
+  --other-width: 20%;
+  --speed: 1000ms;
+}
+
+body {
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* custom */
+.custom__navbar {
+  background-color: var(--main);
+}
+
+.main__btn {
+  width: 100%;
+}
+
+.custom__modal {
+  .modal-header {
+    border-bottom: none;
+  }
+
+  .modal-footer {
+    border-top: none;
+  }
+}
+
+.custom__table {
+
+  .table td,
+  .table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+  }
+}
+
+.deputat {
+  &__img {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
+
+.extra__info {
+  &__title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 25%;
+  }
+
+  &__text {
+    width: 65%;
+  }
+}
+
+@import './responsive';

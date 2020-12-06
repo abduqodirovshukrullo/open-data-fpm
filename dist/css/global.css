@@ -1,0 +1,215 @@
+.section__title {
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid var(--main);
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  display: inline-block; }
+
+.modal-backdrop {
+  z-index: 0 !important; }
+
+#mainPage .main__title {
+  white-space: nowrap;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: #fff; }
+
+#mainPage .custom__btn {
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem; }
+
+#mainPage .fullscreen {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; }
+
+#mainPage .split {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; }
+
+#mainPage .split.left {
+  width: var(--hover-width); }
+
+#mainPage .split.right {
+  width: var(--other-width); }
+
+#mainPage .content__wrapper {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+#mainPage .content__wrapper.left {
+  z-index: 1; }
+
+#mainPage .content__wrapper.right {
+  z-index: -1; }
+
+#mainPage .split.left .custom__btn:hover {
+  background-color: var(--main);
+  border-color: var(--main); }
+
+#mainPage .split.right .custom__btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color); }
+
+#mainPage .split.left {
+  background: url("https://storage.kun.uz/source/4/Y-Bv2-gPlkSRri3kbH7rIPrS2zrmWoW-.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#mainPage .split.right {
+  background: url("https://openbudget.uz/img/sarvar/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#mainPage .split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color); }
+
+#mainPage .split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color); }
+
+#mainPage .split.right,
+#mainPage .split.left,
+#mainPage .split.right::before,
+#mainPage .split.left::before,
+#mainPage .content__wrapper.left,
+#mainPage .content__wrapper.right {
+  transition: all var(--speed) ease-in-out; }
+
+#mainPage .hover-left .left {
+  width: var(--hover-width); }
+
+#mainPage .hover-left .right {
+  width: var(--other-width); }
+
+#mainPage .hover-left .content__wrapper.left {
+  z-index: 1; }
+
+#mainPage .hover-left .content__wrapper.right {
+  z-index: -1; }
+
+#mainPage .hover-right .right {
+  width: var(--hover-width); }
+
+#mainPage .hover-right .left {
+  width: var(--other-width); }
+
+#mainPage .hover-right .content__wrapper.left {
+  z-index: -1; }
+
+#mainPage .hover-right .content__wrapper.right {
+  z-index: 1; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0; }
+
+:root {
+  --main: #2F77B5;
+  --left-bg-color: rgba(72, 70, 110, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 80%;
+  --other-width: 20%;
+  --speed: 1000ms; }
+
+body {
+  line-height: 1.4; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+ol,
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    text-decoration: none;
+    color: inherit; }
+
+/* custom */
+.custom__navbar {
+  background-color: var(--main); }
+
+.main__btn {
+  width: 100%; }
+
+.custom__modal .modal-header {
+  border-bottom: none; }
+
+.custom__modal .modal-footer {
+  border-top: none; }
+
+.custom__table .table td,
+.custom__table .table th {
+  padding: .75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6; }
+
+.deputat__img {
+  width: 250px;
+  height: 300px;
+  overflow: hidden; }
+  .deputat__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; }
+
+.extra__info__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 25%; }
+
+.extra__info__text {
+  width: 65%; }
+
+html {
+  font-size: 16px; }
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 680)); } }
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .main__btn {
+    width: 75%; } }
+
+@media (min-width: 1200px) {
+  .main__btn {
+    width: 50%; } }
